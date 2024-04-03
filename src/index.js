@@ -6,43 +6,54 @@ let mesa = [];
 // SEGUNDA TELA - Função para adicionar um cliente e valor total de sua comanda
 
 function adicionarCliente() {
-    let nome = prompt("INFORME O NOME DO CLIENTE: ");
-    let preco = parseFloat(prompt("INFORME O VALOR DA COMANDA: "));  //utilizei o parseFloat para converter a string em numero decimal
-    let quantidade = parseInt(prompt("Informe a quantidade do produto:")); //utilizei o parseInt para converter a string em numeros inteiros
+    let nome = prompt(" INFORME O NOME DO CLIENTE: ");
+    let comanda = parseFloat(prompt(" INFORME O VALOR DA COMANDA: "));  //utilizei o parseFloat para converter a string em numero decimal
+   
 
-    // Calcula o subtotal do produto
-    let subtotal = preco * quantidade;
 
-    // Adiciona o produto ao carrinho
-    mesa.push({ nome, preco, quantidade, subtotal });
+ // Pedir ao usuário que informe a forma de pagamento
+ let formaPagamento = prompt(" INFORME A FORMA DE PAGAMENTO (PIX, CARTÃO OU DINHEIRO): ");
 
-  alert(`Produto: ${nome}, foi adicionado ao carrinho.`); 
-  alert(`Valor por item: R$ ${preco} \n`);
+ // Verificar a forma de pagamento e calcular o valor total com desconto, se aplicável
+ if (formaPagamento.toLowerCase() === "pix" || formaPagamento.toLowerCase() === "dinheiro") {
+     comanda *= 0.9; // Esse cálculo fará com que o desconto de 10% seja aplicado
+ }
+
+//Não será necessário incluir um "else" já que o valor da comanda já foi definido anteriormente.
+
+    // Calcula o subtotal do valor declarado
+    let subtotal = comanda;
+
+    // Adiciona o cliente, o valor da comanda e calcula o valor da mesa
+    mesa.push({ nome, comanda, subtotal });
+
+
+  console.log(`Valor total de sua comanda é: R$ ${comanda.toFixed(2)} \n`);
 }
 
-// Função para exibir os itens do carrinho e o total da compra
+// Função para exibir os clientes registrados à mesa e consumo total
 function exibirMesa() {
-    let mensagem = "Produtos no carrinho:";
+    let mensagem = "CLIENTES REGISTRADOS NA MESA:\n";
 
-    // Itera sobre os produtos no carrinho
-    mesa.forEach(produto => {
-        mensagem += `\nNome: ${produto.nome}\n`;
-        mensagem += `Preço unitário: R$ ${produto.preco.toFixed(2)}\n`;
-        mensagem += `Subtotal: R$ ${produto.subtotal.toFixed(2)}\n`;
+    // Itera sobre os clientes na mesa
+    mesa.forEach(cliente => {
+        mensagem += `\nNome: ${cliente.nome}\n`;
+        mensagem += `Valor total da Comanda: R$ ${cliente.comanda.toFixed(2)}\n`;
+        mensagem += `Subtotal: R$ ${cliente.subtotal.toFixed(2)}\n`;
     });
 
     // Para calcular o valor total da compra
-    let total = mesa.reduce((acc, produto) => acc + produto.subtotal, 0);//pesquisar reduce map filter
+    let total = mesa.reduce((acc, cliente) => acc + cliente.subtotal, 0);//preciso pesquisar reduce map filter para entender
 
-    mensagem += `Total da compra: R$ ${total.toFixed(2)}\n`;
+    mensagem += `\n-----> CONSUMO TOTAL DA MESA: R$ ${total.toFixed(2)} -----\n`;
 
-    alert(mensagem);
+    console.log(mensagem);
 }
 
 //PRIMEIRA TELA - Função principal para interação com o usuário
 function main() {
     while (true) {
-        let opcao = prompt("ESCOLHA UMA OPÇÃO:\n \n 1 - Adicionar Cliente à Mesa\n 2 - Visualizar consumo da Mesa\n 3 - Encerrar todas as Comandas\n 4 - Abortar Lançamentos \n DIGITE A OPÇÃO DESEJADA:  ");
+        let opcao = prompt("\nESCOLHA UMA OPÇÃO:\n \n -------------------------------------\n 1 - Adicionar Cliente à Mesa\n 2 - Visualizar consumo da Mesa\n 3 - Encerrar todas as Comandas\n 4 - Abortar Lançamentos \n-------------------------------------\n DIGITE A OPÇÃO DESEJADA:  ");
 
         switch (opcao) {
             case "1":
@@ -52,10 +63,10 @@ function main() {
                 exibirMesa();
                 break;
             case "3":
-                console.log ("COMPRA FINALIZADA. Supermercados Abner agradece pela compra");
+                console.log ("\nPAGAMENTOS CONFIRMADOS - MESA LIBERADA\n");
                 return;
             case "4":
-                console.log ("Já vai? Que pena. Esperamos nos ver em breve =]");
+                console.log ("\nATENÇÃO: Todos os lançamentos da mesa foram CANCELADOS\n");
                 return;
             default:
                 console.log ("Opção inválida. Por favor, escolha uma opção entre '1' e '4'.");
