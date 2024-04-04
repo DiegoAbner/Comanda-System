@@ -45,7 +45,7 @@ function exibirMesa() {
     // Para calcular o valor total da compra
     let total = mesa.reduce((acc, cliente) => acc + cliente.subtotal, 0);//preciso pesquisar reduce map filter para entender
 
-    mensagem += `\n-----> CONSUMO TOTAL DA MESA: R$ ${total.toFixed(2)} -----\n`;
+    mensagem += `\n-----> CONSUMO TOTAL DA MESA: R$ ${total.toFixed(2)} <-----\n`;
 
     console.log(mensagem);
 }
@@ -53,7 +53,7 @@ function exibirMesa() {
 //PRIMEIRA TELA - Função principal para interação com o usuário
 function main() {
     while (true) {
-        let opcao = prompt("\nESCOLHA UMA OPÇÃO:\n \n -------------------------------------\n 1 - Adicionar Cliente à Mesa\n 2 - Visualizar consumo da Mesa\n 3 - Encerrar todas as Comandas\n 4 - Abortar Lançamentos \n-------------------------------------\n DIGITE A OPÇÃO DESEJADA:  ");
+        let opcao = prompt("\nESCOLHA UMA OPÇÃO:\n \n =====================================\n 1 - Adicionar Cliente à Mesa\n 2 - Visualizar consumo da Mesa\n 3 - Encerrar todas as Comandas\n 4 - Abortar Lançamentos \n =====================================\n DIGITE A OPÇÃO DESEJADA:  ");
 
         switch (opcao) {
             case "1":
