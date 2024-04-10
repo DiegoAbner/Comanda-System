@@ -28,32 +28,7 @@ function adicionarCliente() {
     console.log(`Valor total de sua comanda é: R$ ${comanda.toFixed(2)} \n`);
 }
 
-// Função para exibir os clientes registrados à mesa e consumo total
-function exibirMesa() {
-    let mensagem = "CLIENTES REGISTRADOS NA MESA:\n";
-
-    // Itera sobre os clientes na mesa
-    mesa.forEach(cliente => {
-        mensagem += `\nNome: ${cliente.nome}\n`;
-        mensagem += `Valor total da Comanda: R$ ${cliente.comanda.toFixed(2)}\n`;
-        mensagem += `Subtotal: R$ ${cliente.subtotal.toFixed(2)}\n`;
-    });
-
-    // Para calcular o valor total da compra
-    let total = mesa.reduce((acc, cliente) => acc + cliente.subtotal, 0); //Dica do Tiago: pesquisar reduce, map e filter para entender
-
-    mensagem += `\n-----> CONSUMO TOTAL DA MESA: R$ ${total.toFixed(2)} <-----\n`;
-
-    console.log(mensagem);
-}
-
-// Função para adicionar gorjeta de 10% ao valor total da comanda de cada cliente
-function adicionarGorgeta() {
-    mesa.forEach(cliente => {
-        let gorjeta = cliente.comanda * 0.1; // Calcula a gorjeta (10% do valor total da comanda)
-        cliente.comanda += gorjeta; // Adiciona a gorjeta ao valor total da comanda
-        cliente.subtotal += gorjeta; // Atualiza o subtotal do cliente
-    });
-
-    console.log("Gorjeta de 10% adicionada a todas as comandas.");
-}
+module.exports = {
+    adicionarCliente: adicionarCliente,
+    mesa: mesa
+};

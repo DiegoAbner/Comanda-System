@@ -1,0 +1,17 @@
+const prompt = require('prompt-sync')({ sigint: true });
+
+// Função para adicionar gorjeta de 10% ao valor total da comanda de cada cliente
+function adicionarGorgeta(mesa) {
+    mesa.forEach(cliente => {
+        let gorjeta = cliente.comanda * 0.1; // Calcula a gorjeta (10% do valor total da comanda)
+        cliente.comanda += gorjeta; // Adiciona a gorjeta ao valor total da comanda
+        cliente.subtotal += gorjeta; // Atualiza o subtotal do cliente
+    });
+
+    console.log("Gorjeta de 10% adicionada a todas as comandas.");
+}
+
+
+
+// Exporta a função adicionarGorgeta
+module.exports = adicionarGorgeta;
