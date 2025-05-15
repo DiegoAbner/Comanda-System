@@ -28,6 +28,26 @@ Praticar a lógica de programação com foco em entrada e saída de dados no ter
 - Manipulação de listas e objetos
 - Organização e clareza de código no terminal
 
+
+## 👩🏿‍💻 Histórias de usuários 👨🏽‍💻
+Uma história do usuário é uma explicação informal e geral sobre um recurso de software escrita a partir da perspectiva do usuário final. Seu objetivo é articular como um recurso de software pode gerar valor para o cliente. No caso desta aplicação, a utilização é voltada para o atendimento de mesas em restaurantes, operada diretamente por um atendente via terminal.
+
+- ### Primeira História de Usuário
+Eu, como garçom/garçonete, inicio o sistema via terminal para registrar o nome dos clientes que estão sentados na mesa, evitando anotações manuais.
+
+- ### Segunda História de Usuário
+Eu, como garçom/garçonete, informo individualmente os itens consumidos por cada cliente, garantindo o controle específico de consumo.
+
+- ### Terceira História de Usuário
+Eu, como garçom/garçonete, acompanho o total acumulado de cada cliente e da mesa, sem precisar realizar cálculos manualmente.
+
+- ### Quarta História de Usuário
+Eu, como garçom/garçonete, decido se será aplicada ou não a taxa de gorjeta, de acordo com a política do restaurante ou escolha do cliente.
+
+- ### Quinta e última História de Usuário
+Eu, como garçom/garçonete, finalizo o atendimento visualizando um resumo detalhado com o valor total da mesa, a divisão proporcional por cliente e a aplicação (ou não) da gorjeta.
+
+
 ## ▶️ Como Executar
 
 1. Clone o repositório:
