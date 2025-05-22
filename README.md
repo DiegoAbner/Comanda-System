@@ -1,8 +1,29 @@
 
 # 💵 Comanda System – Sistema de Consumo via Terminal
 
+![Captura de Tela 2025-05-22 às 09 50 32](https://github.com/user-attachments/assets/fd0b93a9-0831-4938-a434-7fea98eb6218)
+
 Este projeto simula um sistema de comanda digital executado diretamente no terminal. Ele permite o controle de clientes, consumo individual e coletivo por mesa, além do cálculo de gorjetas.
 
+## 🎥 Demonstração do Projeto
+
+
+
+https://github.com/user-attachments/assets/f454b8bb-d7ed-4b0e-a495-cc477927f101
+
+
+- ### Opção: Abortar Lançamentos
+
+
+
+
+https://github.com/user-attachments/assets/84d7aaf5-59d5-42e7-9901-5406348b0d21
+
+
+
+
+
+  
 ## 🧠 Objetivo
 
 Praticar a lógica de programação com foco em entrada e saída de dados no terminal, uso de módulos e manipulação de arrays e objetos em JavaScript.
@@ -69,3 +90,11 @@ npm install prompt-sync
 ```bash
 node index.js
 ```
+
+## ✍🏾 Autor
+
+### Diego Abner
+
+  [LinkedIn](https://www.linkedin.com/in/abnerdiego/)
+
+  Projeto sob supervisão da [Campinho Digital](https://www.instagram.com/campinhodigital?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==) no curso de Programação Web Front End
