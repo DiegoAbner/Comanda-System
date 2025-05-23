@@ -41,6 +41,22 @@ Praticar a lógica de programação com foco em entrada e saída de dados no ter
 - Aplicação de gorjeta
 - Saída detalhada no terminal com `console.log`
 
+## ⚙️ Organização e estrutura dos arquivos com os códigos.
+![Captura de Tela 2025-05-22 às 20 42 49](https://github.com/user-attachments/assets/701caecf-6055-4308-a6c0-30a9a6172648)
+
+
+O projeto teve como desafio inicial, a estrutura e organização dos arquivos de modo que seja fácil a localização de possíveis erros. Com isso, alem de praticar uma codificação mais limpa e organizada, facilita a compreensão de cada função aplicada, no projeto.
+
+![Captura de Tela 2025-05-22 às 20 46 55](https://github.com/user-attachments/assets/d37f5ebe-fbfd-4589-b2dd-3c9a93daf862)
+Com isso, cada tema, como aplicação de gorgeta, está correlacionado com seu próprio arquivo de origem.
+
+
+
+### While em Loop
+![Captura de Tela 2025-05-22 às 21 03 53](https://github.com/user-attachments/assets/6e11a7ac-8085-4eba-a16e-a40e5c79293a)
+
+Uso de while em loop para evitar múltiplas tentativas de if e else, tornando o trecho menos poluído e com melhor performance, já que esse tipo de estrutura permite um controle de fluxo mais direto e contínuo até que o dado esperado seja corretamente fornecido pelo usuário. Essa escolha também contribui para uma experiência mais fluida e segura durante a execução da aplicação no terminal, prevenindo travamentos ou comportamentos inesperados causados por entradas incorretas. 
+
 ## 💡 Aprendizados
 
 - Modularização do código em JS
